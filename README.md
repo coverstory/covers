@@ -1,0 +1,2 @@
+# covers
+Automatic cover generation
