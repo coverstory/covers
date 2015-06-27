@@ -21927,7 +21927,7 @@ var Cover = React.createClass({displayName: "Cover",
     // the bottommost element has the highest z-index
     return (
       React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
-        React.createElement(Background, {color: "#00FF00"}), 
+        React.createElement(Background, null), 
         React.createElement(Title, null)
       )
     );
