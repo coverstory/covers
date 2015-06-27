@@ -1,8 +1,9 @@
-## title space rectanlge
+# title space rectangle
 * fiction:    x="0" y="1770" width="1800" height="590"
 * nonfiction: x="0" y="0" width="1800" height="590"
 * poetry:     do not display rectangle
 
+#feature shape
 ## height & width
 *if across:
 height and width of shape = 1620px / number of shapes
@@ -29,19 +30,23 @@ if diagonal:
 
 ## margin
 *if detach:
-margin is 
+  margin is 
 
 *if touch:
-margin is 
+  margin is 
 
 *if union:
-margin is 
+  margin is 
 
 *if overlap:
-margin is 
+  margin is 
 
 *if subtract:
-margin is 
+  margin is 
 
 *if intersect:
-margin is 
+  margin is 
+  
+  #texture
+  
+  #color
