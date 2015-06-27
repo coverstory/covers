@@ -1,21 +1,34 @@
 var React = require('react/addons');
 
-var Cover = React.createClass({
+var HEIGHT = 2360;
+var WIDTH = 1800;
+
+var Background = React.createClass({
   getDefaultProps: function() {
     return {
-      color: '#FF0000',
-      width: 300,
-      height: 400,
-      offset: 100,
-      availableHeight: 600
+      color: "#FF0000"
     }
   },
 
   render: function() {
-    var background = <rect fill={this.props.color} width={this.props.width} height={this.props.height} x='0' y='0' />;
     return (
-      <svg width={this.props.width} height={this.props.height}>
-        {background}
+      <rect fill={this.props.color} width="100%" height="100%" x="0" y="0" id="cover-background" />
+    );
+  }
+});
+
+var Cover = React.createClass({
+  getDefaultProps: function() {
+    return {
+      width: WIDTH/6,
+      height: HEIGHT/6
+    }
+  },
+
+  render: function() {
+    return (
+      <svg width={this.props.width} height={this.props.height} id="cover">
+        <Background color="#00FF00" />
       </svg>
     );
   }

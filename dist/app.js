@@ -21879,22 +21879,35 @@ React.render(React.createElement(App, null), document.getElementById('app'));
 },{"./cover.jsx":175,"react/addons":2}],175:[function(require,module,exports){
 var React = require('react/addons');
 
-var Cover = React.createClass({displayName: "Cover",
+var HEIGHT = 2360;
+var WIDTH = 1800;
+
+var Background = React.createClass({displayName: "Background",
   getDefaultProps: function() {
     return {
-      color: '#FF0000',
-      width: 300,
-      height: 400,
-      offset: 100,
-      availableHeight: 600
+      color: "#FF0000"
     }
   },
 
   render: function() {
-    var background = React.createElement("rect", {fill: this.props.color, width: this.props.width, height: this.props.height, x: "0", y: "0"});
     return (
-      React.createElement("svg", {width: this.props.width, height: this.props.height}, 
-        background
+      React.createElement("rect", {fill: this.props.color, width: "100%", height: "100%", x: "0", y: "0", id: "cover-background"})
+    );
+  }
+});
+
+var Cover = React.createClass({displayName: "Cover",
+  getDefaultProps: function() {
+    return {
+      width: WIDTH/6,
+      height: HEIGHT/6
+    }
+  },
+
+  render: function() {
+    return (
+      React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
+        React.createElement(Background, {color: "#00FF00"})
       )
     );
   }
