@@ -1,6 +1,6 @@
 ## genre
-* fiction:    rectangle is full width, 25% height, starts 0px from top
-* nonfiction: rectangle is full wdith, 25% height, starts 1770px from top
+* fiction:    title space rectangle is full width, 25% height, starts 0px from top 0, 0
+* nonfiction: title space rectangle is full wdith, 25% height, starts 1770px from top
 * poetry:     do not display rectangle
 
 ## instance
