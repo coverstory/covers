@@ -1,6 +1,12 @@
 # covers
 Automatic cover generation
 
+## Build
+
+1. `npm install -g gulp`
+2. `npm install`
+3. `gulp`
+
 ## Inspiration
 
 * [Spirals](http://golancourses.net/2011spring/03/22/4962/)
