@@ -21891,11 +21891,10 @@ var Cover = React.createClass({displayName: "Cover",
   },
 
   render: function() {
+    var background = React.createElement("rect", {fill: this.props.color, width: this.props.width, height: this.props.height, x: "0", y: "0"});
     return (
-      React.createElement("svg", {width: "1000", height: "1000"}, 
-        React.createElement("rect", {fill: this.props.color, 
-        width: this.props.width, height: this.props.height, 
-        x: this.props.offset, y: this.props.availableHeight - this.props.height})
+      React.createElement("svg", {width: this.props.width, height: this.props.height}, 
+        background
       )
     );
   }

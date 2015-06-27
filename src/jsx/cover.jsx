@@ -12,11 +12,10 @@ var Cover = React.createClass({
   },
 
   render: function() {
+    var background = <rect fill={this.props.color} width={this.props.width} height={this.props.height} x='0' y='0' />;
     return (
-      <svg width="1000" height="1000">
-        <rect fill={this.props.color}
-        width={this.props.width} height={this.props.height}
-        x={this.props.offset} y={this.props.availableHeight - this.props.height} />
+      <svg width={this.props.width} height={this.props.height}>
+        {background}
       </svg>
     );
   }
