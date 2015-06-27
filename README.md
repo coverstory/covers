@@ -1,6 +1,9 @@
 # covers
 Automatic cover generation
 
+## Notes
+* Cover size: `1800x2360` which is pretty much a `3:4` ratio.
+
 ## Inspiration
 
 * [Spirals](http://golancourses.net/2011spring/03/22/4962/)
