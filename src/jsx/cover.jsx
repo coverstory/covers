@@ -17,6 +17,23 @@ var Background = React.createClass({
   }
 });
 
+var Title = React.createClass({
+  getDefaultProps: function() {
+    return {
+      color: "#FFFFFF",
+      backgroundColor: "#000000",
+      height: "25%",
+      width: "100%"
+    }
+  },
+
+  render: function() {
+    return (
+      <rect fill={this.props.backgroundColor} width={this.props.width} height={this.props.height} x="0" y="0" />
+    )
+  }
+});
+
 var Cover = React.createClass({
   getDefaultProps: function() {
     return {
@@ -26,9 +43,13 @@ var Cover = React.createClass({
   },
 
   render: function() {
+    // z-index ordering is related to the tag's position within the SVG
+    // the topmost element has the lowest z-index
+    // the bottommost element has the highest z-index
     return (
       <svg width={this.props.width} height={this.props.height} id="cover">
         <Background color="#00FF00" />
+        <Title />
       </svg>
     );
   }
