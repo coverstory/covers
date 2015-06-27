@@ -8,4 +8,5 @@ Automatic cover generation
 * [Mathematical Typography](http://www.tiemenrapati.com/blog/?p=310)
 * [Wikipedia on parametric equations](https://en.wikipedia.org/wiki/Parametric_equation#Hyperbola)
 * [Parametric art - part 1](http://www.flashandmath.com/mathlets/more/art/index.html)
+* [Parametric art - part 2 (interactive)](http://www.flashandmath.com/advanced/art/)
 * [Fourier Art](http://fourierart.com/)
