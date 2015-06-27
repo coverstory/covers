@@ -46,6 +46,11 @@ if diagonal:
 
 *if intersect:
   margin is 
+
+
+##rotation
+*0 degrees
+*or 15 degrees
   
 #texture
   
