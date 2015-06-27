@@ -21862,15 +21862,45 @@ module.exports = warning;
 }).call(this,require('_process'))
 },{"./emptyFunction":131,"_process":1}],174:[function(require,module,exports){
 var React = require('react/addons');
+var Cover = require('./cover.jsx');
 
 var App = React.createClass({displayName: "App",
     render: function(){
         return (
-            React.createElement("div", {className: "cover"})            
+            React.createElement("div", {className: "cover"}, 
+                React.createElement(Cover, null)
+            )
         )
     }
 });
 
 React.render(React.createElement(App, null), document.getElementById('app'));
+
+},{"./cover.jsx":175,"react/addons":2}],175:[function(require,module,exports){
+var React = require('react/addons');
+
+var Cover = React.createClass({displayName: "Cover",
+  getDefaultProps: function() {
+    return {
+      color: '#FF0000',
+      width: 300,
+      height: 400,
+      offset: 100,
+      availableHeight: 600
+    }
+  },
+
+  render: function() {
+    return (
+      React.createElement("svg", {width: "1000", height: "1000"}, 
+        React.createElement("rect", {fill: this.props.color, 
+        width: this.props.width, height: this.props.height, 
+        x: this.props.offset, y: this.props.availableHeight - this.props.height})
+      )
+    );
+  }
+});
+
+module.exports = Cover;
 
 },{"react/addons":2}]},{},[174]);
