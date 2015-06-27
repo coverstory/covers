@@ -30,13 +30,13 @@ if diagonal:
 
 ## margin
 *if detach:
-  margin is 
+  margin = size * .9
 
 *if touch:
-  margin is 
+  margin = 0
 
 *if union:
-  margin is 
+  margin = -(size * .67)
 
 *if overlap:
   margin is 
