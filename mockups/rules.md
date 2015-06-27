@@ -47,6 +47,6 @@ if diagonal:
 *if intersect:
   margin is 
   
-  #texture
+#texture
   
-  #color
+#color
