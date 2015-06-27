@@ -14,6 +14,7 @@ height and width of shape = 2120px / number of shapes
 *if diagonal:
 height and width of shape = 2670px / number of shapes
 
+
 ## new shape instance
 if across:
   x = x + width * 1.1
@@ -53,5 +54,7 @@ if diagonal:
 *or 15 degrees
   
 #texture
-  
+*parametric
+
 #color
+*hex
