@@ -21928,11 +21928,16 @@ var Cover = React.createClass({displayName: "Cover",
 module.exports = Cover;
 
 },{"./background.jsx":175,"./title.jsx":177,"react/addons":2}],177:[function(require,module,exports){
+/* Generating a title component should do some analysis on the title
+in order to render multiple lines of text, if necessary. If there are
+multiple lines, then the title area should be resized as appropriate. */
+
 var React = require('react/addons');
 
 var Title = React.createClass({displayName: "Title",
   getDefaultProps: function() {
     return {
+      title: "Moby Dick",
       color: "#FFFFFF",
       backgroundColor: "#000000",
       height: "25%",
@@ -21942,7 +21947,10 @@ var Title = React.createClass({displayName: "Title",
 
   render: function() {
     return (
-      React.createElement("rect", {fill: this.props.backgroundColor, width: this.props.width, height: this.props.height, x: "0", y: "0"})
+      React.createElement("g", {id: "cover-title"}, 
+        React.createElement("rect", {fill: this.props.backgroundColor, width: this.props.width, height: this.props.height, x: "0", y: "0"}), 
+        React.createElement("text", {fill: this.props.color, x: "16", y: "15%", fontSize: "32", fontFamily: "serif"}, this.props.title)
+      )
     )
   }
 });
