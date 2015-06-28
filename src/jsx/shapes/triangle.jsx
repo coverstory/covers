@@ -12,8 +12,8 @@ var Triangle = React.createClass({
 
     render: function() {
         return (
-            <svg x={this.props.x} y={this.props.y} height={this.props.height} width={this.props.width} className="triangle">
-                <polygon points="25,50 0,50 12.5,25 25,0 37.5,25 50,50 "/>
+            <svg viewBox="0 0 2 2" x={this.props.x} y={this.props.y} height={this.props.height} width={this.props.width} className="triangle" >
+                <polygon points="0,2 1,0 2,2"/>
             </svg>
         )
     }
