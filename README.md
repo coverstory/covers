@@ -8,10 +8,10 @@ Automatic cover generation
 3. `gulp`
 
 ## Notes
-* Cover size: `1800x2360` which is pretty much a `3:4` ratio.
+* `gradients.json` file courtesy [uiGradients](https://github.com/Ghosh/uiGradients)
 * [Sentiments](https://github.com/coverstory/covers/tree/master/sentiments)
 
-## Inspiration
+## Resources
 
 * [Spirals](http://golancourses.net/2011spring/03/22/4962/)
 * [Hypotrochoid curves](http://www.craigwentdigital.com/2015/02/nature-of-code-week-3-oscillations/)

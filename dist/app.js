@@ -21865,22 +21865,22 @@ var React = require('react/addons');
 var Cover = require('./cover.jsx');
 
 var App = React.createClass({displayName: "App",
-    render: function(){
-        return (
-            React.createElement("div", {className: "cover"}, 
-                React.createElement(Cover, null)
-            )
-        )
+
+  render: function() {
+    var book = {
+      title: 'Alice in Wonderland',
+      author: 'Lewis Carroll'
     }
+    return(
+      React.createElement(Cover, {book: book})
+    )
+  }
 });
 
 React.render(React.createElement(App, null), document.getElementById('app'));
 
-},{"./cover.jsx":175,"react/addons":2}],175:[function(require,module,exports){
+},{"./cover.jsx":176,"react/addons":2}],175:[function(require,module,exports){
 var React = require('react/addons');
-
-var HEIGHT = 2360;
-var WIDTH = 1800;
 
 var Background = React.createClass({displayName: "Background",
   getDefaultProps: function() {
@@ -21896,28 +21896,22 @@ var Background = React.createClass({displayName: "Background",
   }
 });
 
-var Title = React.createClass({displayName: "Title",
-  getDefaultProps: function() {
-    return {
-      color: "#FFFFFF",
-      backgroundColor: "#000000",
-      height: "25%",
-      width: "100%"
-    }
-  },
+module.exports = Background;
 
-  render: function() {
-    return (
-      React.createElement("rect", {fill: this.props.backgroundColor, width: this.props.width, height: this.props.height, x: "0", y: "0"})
-    )
-  }
-});
+},{"react/addons":2}],176:[function(require,module,exports){
+var React = require('react/addons');
+
+var Background = require('./background.jsx');
+var Illustration = require('./illustration.jsx');
+
+var HEIGHT = 2360;
+var WIDTH = 1800;
 
 var Cover = React.createClass({displayName: "Cover",
   getDefaultProps: function() {
     return {
-      width: WIDTH/6,
-      height: HEIGHT/6
+      width: "100%",
+      height: window.innerHeight + 'px'
     }
   },
 
@@ -21926,14 +21920,140 @@ var Cover = React.createClass({displayName: "Cover",
     // the topmost element has the lowest z-index
     // the bottommost element has the highest z-index
     return (
-      React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
-        React.createElement(Background, null), 
-        React.createElement(Title, null)
+      React.createElement("div", {className: "cover container"}, 
+        React.createElement("header", null, 
+          React.createElement("h1", null, this.props.book.title), 
+          React.createElement("h2", null, this.props.book.author)
+        ), 
+        React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
+          React.createElement(Background, null), 
+          React.createElement(Illustration, null)
+        )
       )
+
     );
   }
 });
 
 module.exports = Cover;
+
+},{"./background.jsx":175,"./illustration.jsx":177,"react/addons":2}],177:[function(require,module,exports){
+var React = require('react/addons');
+
+var Triangle = require('./shapes/triangle.jsx');
+var Pentagon = require('./shapes/pentagon.jsx');
+
+var Illustration = React.createClass({displayName: "Illustration",
+
+  across: function() {
+    return (
+      React.createElement("g", {className: "across cover-illustration", width: "100%", height: "100%"}, 
+        React.createElement("rect", {x: "0", y: "33%", height: "33%", width: "33%", fill: "#0000FF"}), 
+        React.createElement("rect", {x: "33%", y: "33%", height: "33%", width: "33%", fill: "#00FF00"}), 
+        React.createElement("rect", {x: "66%", y: "33%", height: "33%", width: "33%", fill: "#FFFF00"})
+      )
+    )
+  },
+
+  down: function() {
+    return (
+      React.createElement("g", {className: "down cover-illustration", width: "100%", height: "100%"}, 
+        React.createElement("rect", {x: "33%", y: "0%", height: "33%", width: "33%", fill: "#0000FF"}), 
+        React.createElement("rect", {x: "33%", y: "33%", height: "33%", width: "33%", fill: "#00FF00"}), 
+        React.createElement("rect", {x: "33%", y: "66%", height: "33%", width: "33%", fill: "#FFFF00"})
+      )
+    )
+  },
+
+  diagonal: function() {
+    return (
+      React.createElement("g", {className: "diagonal", width: "100%", height: "100%"}, 
+        React.createElement("rect", {x: "0", y: "0", height: "50%", width: "50%", fill: "#0000FF"}), 
+        React.createElement("rect", {x: "50%", y: "50%", height: "50%", width: "50%", fill: "#00FF00"}), 
+        React.createElement("rect", {x: "25%", y: "25%", height: "50%", width: "50%", fill: "#FFFF00"})
+      )
+    )
+  },
+
+  circle: function() {
+    return React.createElement("circle", {cx: "50%", cy: "50%", r: "25%", fill: "#FFFFFF", id: "center-circle"})
+  },
+
+  triangle: function(x, y, height, width) {
+    return React.createElement(Triangle, {x: x, y: y, height: height, width: width})
+  },
+
+  pentagon: function() {
+    return React.createElement(Pentagon, null)
+  },
+
+  render: function() {
+    var circle = this.circle();
+    var triangle1 = this.triangle("10%", "10%", "50%", "50%");
+    var triangle2 = this.triangle("20%", "30%", "50%", "50%");
+    var triangle3 = this.triangle("30%", "50%", "50%", "50%");
+    var pentagon = this.pentagon();
+    return (
+      React.createElement("g", {className: "cover-illustration"}, 
+        circle, 
+        triangle1, 
+        triangle2, 
+        triangle3, 
+        pentagon
+      )
+    )
+  }
+
+});
+
+module.exports = Illustration;
+
+},{"./shapes/pentagon.jsx":178,"./shapes/triangle.jsx":179,"react/addons":2}],178:[function(require,module,exports){
+var React = require('react/addons');
+
+var Pentagon = React.createClass({displayName: "Pentagon",
+    getDefaultProps: function() {
+        return({
+            x: "50%",
+            y: "50%",
+            height: "50%",
+            width: "50%"
+        })
+    },
+
+    render: function() {
+        return (
+            React.createElement("svg", {x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width, className: "pentagon"}, 
+                React.createElement("polygon", {points: "24.999,0 50,24.098 40.448,50 9.549,50 0,24.098 "})
+            )
+        )
+    }
+});
+
+module.exports = Pentagon;
+
+},{"react/addons":2}],179:[function(require,module,exports){
+var React = require('react/addons');
+
+var Triangle = React.createClass({displayName: "Triangle",
+    getDefaultProps: function() {
+        return({
+            x: "50%",
+            y: "50%",
+            height: "50%",
+            width: "50%"
+        })
+    },
+
+    render: function() {
+        return (
+            React.createElement("svg", {viewBox: "0 0 2 2", x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width, className: "triangle"}, 
+                React.createElement("polygon", {points: "0,2 1,0 2,2"})
+            )
+        )
+    }
+});
+
+module.exports = Triangle;
 
 },{"react/addons":2}]},{},[174]);
