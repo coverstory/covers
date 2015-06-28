@@ -1,4 +1,16 @@
 #app {
-    margin: 2em auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
+}
+
+#cover {
+    display: block;
+}
+
+header {
+    margin: 1em;
+}
+
+header h1 {
+    margin-top: 0;
 }

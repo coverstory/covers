@@ -9,8 +9,8 @@ var WIDTH = 1800;
 var Cover = React.createClass({
   getDefaultProps: function() {
     return {
-      width: WIDTH/6,
-      height: HEIGHT/6
+      width: "100%",
+      height: window.innerHeight + 'px'
     }
   },
 
