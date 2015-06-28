@@ -56,10 +56,6 @@ var Illustration = React.createClass({
     return (
       <g className="cover-illustration">
         {circle}
-        {triangle1}
-        {triangle2}
-        {triangle3}
-        {pentagon}
       </g>
     )
   }
