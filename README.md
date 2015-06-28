@@ -22,7 +22,7 @@ Automatic cover generation
 * [Fourier Art](http://fourierart.com/)
 * [Book covers with parametric curves](http://www.tiemenrapati.com/blog/?p=427)
 * [Beautiful Gradients](http://uigradients.com/#Mojito)
-* [Swissted - Swiss design applied to concert posters](http://www.swissted.com)
+* [Elements of Design](https://github.com/coverstory/covers/blob/master/mockups/styleguide-inspiration.gif)
 * Rectangle world, lots of great articles [here](http://rectangleworld.com/)
   * [Fractal lines](http://rectangleworld.com/blog/archives/538)
   * [Chaotic fractals](http://rectangleworld.com/blog/archives/561)
