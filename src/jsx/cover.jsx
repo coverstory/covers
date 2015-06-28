@@ -22,7 +22,7 @@ var Cover = React.createClass({
       <div className="cover container">
         <header>
           <h1>{this.props.book.title}</h1>
-          <p>{this.props.book.author}</p>
+          <h2>{this.props.book.author}</h2>
         </header>
         <svg width={this.props.width} height={this.props.height} id="cover">
           <Background />
