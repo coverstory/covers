@@ -21923,7 +21923,7 @@ var Cover = React.createClass({displayName: "Cover",
       React.createElement("div", {className: "cover container"}, 
         React.createElement("header", null, 
           React.createElement("h1", null, this.props.book.title), 
-          React.createElement("p", null, this.props.book.author)
+          React.createElement("h2", null, this.props.book.author)
         ), 
         React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
           React.createElement(Background, null), 
@@ -21964,7 +21964,7 @@ var Illustration = React.createClass({displayName: "Illustration",
 
   diagonal: function() {
     return (
-      React.createElement("g", {className: "diagonal cover-illustration", width: "100%", height: "100%"}, 
+      React.createElement("g", {className: "diagonal", width: "100%", height: "100%"}, 
         React.createElement("rect", {x: "0", y: "0", height: "50%", width: "50%", fill: "#0000FF"}), 
         React.createElement("rect", {x: "50%", y: "50%", height: "50%", width: "50%", fill: "#00FF00"}), 
         React.createElement("rect", {x: "25%", y: "25%", height: "50%", width: "50%", fill: "#FFFF00"})
@@ -21972,9 +21972,17 @@ var Illustration = React.createClass({displayName: "Illustration",
     )
   },
 
+  circle: function() {
+    return React.createElement("circle", {cx: "50%", cy: "50%", r: "25%", fill: "#FFFFFF", id: "center-circle"})
+  },
+
   render: function() {
-    var illustration = this.diagonal();
-    return illustration;
+    var circle = this.circle();
+    return (
+      React.createElement("g", {className: "cover-illustration"}, 
+        circle
+      )
+    )
   }
 
 });
