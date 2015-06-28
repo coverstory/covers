@@ -21864,17 +21864,7 @@ module.exports = warning;
 var React = require('react/addons');
 var Cover = require('./cover.jsx');
 
-var App = React.createClass({displayName: "App",
-    render: function(){
-        return (
-            React.createElement("div", {className: "cover"}, 
-                React.createElement(Cover, null)
-            )
-        )
-    }
-});
-
-React.render(React.createElement(App, null), document.getElementById('app'));
+React.render(React.createElement(Cover, null), document.getElementById('app'));
 
 },{"./cover.jsx":176,"react/addons":2}],175:[function(require,module,exports){
 var React = require('react/addons');
