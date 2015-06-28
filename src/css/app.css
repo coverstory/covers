@@ -1,4 +1,39 @@
 .cover {
-    margin: 2em auto;
-    text-align: center;
+	margin: 2em auto;
+	text-align: center;
+}
+rect:not([id]) {
+	-webkit-animation:bubble linear 3s infinite running;
+	animation:bubble linear 3s infinite running;
+	position: relative;    
+
+
+}
+stop[offset^='0'] {
+	stop-color: hsla(60, 100%, 50%, 1);
+}
+
+stop[offset^='100'] {
+	stop-color: hsla(240, 100%, 50%, 1);
+}
+
+
+
+@-webkit-keyframes sentiment {
+   0% {
+ -webkit-transform: translateY(400px) rotate(90deg);
+  }
+ 
+  100% {
+ -webkit-transform: translateY(0px) rotate(0deg);
+  }
+}
+@keyframes bubble {
+  0% {
+ transform: translateY(400px) rotate(90deg);
+  }
+ 
+  100% {
+ transform: translateY(0px) rotate(0deg);
+  }
 }
