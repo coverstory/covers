@@ -21979,8 +21979,8 @@ var Illustration = React.createClass({displayName: "Illustration",
     return React.createElement("circle", {cx: "50%", cy: "50%", r: "25%", fill: "#FFFFFF", id: "center-circle"})
   },
 
-  triangle: function() {
-    return React.createElement(Triangle, null)
+  triangle: function(x, y, height, width) {
+    return React.createElement(Triangle, {x: x, y: y, height: height, width: width})
   },
 
   pentagon: function() {
@@ -21989,12 +21989,16 @@ var Illustration = React.createClass({displayName: "Illustration",
 
   render: function() {
     var circle = this.circle();
-    var triangle = this.triangle();
+    var triangle1 = this.triangle("10%", "10%", "50%", "50%");
+    var triangle2 = this.triangle("20%", "30%", "50%", "50%");
+    var triangle3 = this.triangle("30%", "50%", "50%", "50%");
     var pentagon = this.pentagon();
     return (
       React.createElement("g", {className: "cover-illustration"}, 
         circle, 
-        triangle, 
+        triangle1, 
+        triangle2, 
+        triangle3, 
         pentagon
       )
     )
@@ -22043,8 +22047,8 @@ var Triangle = React.createClass({displayName: "Triangle",
 
     render: function() {
         return (
-            React.createElement("svg", {x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width, className: "triangle"}, 
-                React.createElement("polygon", {points: "25,50 0,50 12.5,25 25,0 37.5,25 50,50 "})
+            React.createElement("svg", {viewBox: "0 0 2 2", x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width, className: "triangle"}, 
+                React.createElement("polygon", {points: "0,2 1,0 2,2"})
             )
         )
     }
