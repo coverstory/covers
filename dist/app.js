@@ -21864,7 +21864,18 @@ module.exports = warning;
 var React = require('react/addons');
 var Cover = require('./cover.jsx');
 
-React.render(React.createElement(Cover, null), document.getElementById('app'));
+var App = React.createClass({displayName: "App",
+    render: function() {
+        return(
+            React.createElement("div", {class: "cover"}, 
+                React.createElement(Cover, null), 
+                React.createElement("h1", null, "Moby Dick")
+            )
+        )
+    }
+});
+
+React.render(React.createElement(App, null), document.getElementById('app'));
 
 },{"./cover.jsx":176,"react/addons":2}],175:[function(require,module,exports){
 var React = require('react/addons');
@@ -21889,7 +21900,6 @@ module.exports = Background;
 var React = require('react/addons');
 
 var Background = require('./background.jsx');
-var Title = require('./title.jsx');
 var Illustration = require('./illustration.jsx');
 
 var HEIGHT = 2360;
@@ -21910,8 +21920,7 @@ var Cover = React.createClass({displayName: "Cover",
     return (
       React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
         React.createElement(Background, null), 
-        React.createElement(Illustration, null), 
-        React.createElement(Title, null)
+        React.createElement(Illustration, null)
       )
     );
   }
@@ -21919,7 +21928,7 @@ var Cover = React.createClass({displayName: "Cover",
 
 module.exports = Cover;
 
-},{"./background.jsx":175,"./illustration.jsx":177,"./title.jsx":178,"react/addons":2}],177:[function(require,module,exports){
+},{"./background.jsx":175,"./illustration.jsx":177,"react/addons":2}],177:[function(require,module,exports){
 var React = require('react/addons');
 
 var Illustration = React.createClass({displayName: "Illustration",
@@ -21955,42 +21964,12 @@ var Illustration = React.createClass({displayName: "Illustration",
   },
 
   render: function() {
-    var illustration = this.down();
+    var illustration = this.diagonal();
     return illustration;
   }
 
 });
 
 module.exports = Illustration;
-
-},{"react/addons":2}],178:[function(require,module,exports){
-/* Generating a title component should do some analysis on the title
-in order to render multiple lines of text, if necessary. If there are
-multiple lines, then the title area should be resized as appropriate. */
-
-var React = require('react/addons');
-
-var Title = React.createClass({displayName: "Title",
-  getDefaultProps: function() {
-    return {
-      title: "Moby Dick",
-      color: "#FFFFFF",
-      backgroundColor: "transparent",
-      height: "25%",
-      width: "100%"
-    }
-  },
-
-  render: function() {
-    return (
-      React.createElement("g", {id: "cover-title"}, 
-        React.createElement("rect", {fill: this.props.backgroundColor, width: this.props.width, height: this.props.height, x: "0", y: "0"}), 
-        React.createElement("text", {fill: this.props.color, x: "16", y: "15%", fontSize: "32", fontFamily: "serif"}, this.props.title)
-      )
-    )
-  }
-});
-
-module.exports = Title;
 
 },{"react/addons":2}]},{},[174]);

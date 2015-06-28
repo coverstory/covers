@@ -33,7 +33,7 @@ var Illustration = React.createClass({
   },
 
   render: function() {
-    var illustration = this.down();
+    var illustration = this.diagonal();
     return illustration;
   }
 
