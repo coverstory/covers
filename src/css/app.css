@@ -1,4 +1,79 @@
 #app {
-    margin: 2em auto;
-    text-align: center;
+    margin: 0;
+    text-align: left;
+}
+
+#cover {
+    display: block;
+}
+
+header {
+    margin: 1em;
+}
+
+header h1, header h2 {
+    margin-top: 0;
+    font-family: "Playfair Display", serif;
+}
+
+header h2 {
+  color: #666;
+}
+
+/* SVG elements */
+
+#cover-background {
+  transition-property: fill;
+  transition-duration: 10s;
+  /*
+  -webkit-animation:fill 10s infinite;
+  animation:fill 10s infinite;
+
+  animation-name: sentiment;
+  animation-play-state: running;
+  */
+}
+
+.cover-illustration {}
+
+.cover-illustration > rect {}
+
+.cover-illustration > circle {}
+
+.cover-illustration > .triangle {}
+
+.cover-illustration > .pentagon {}
+
+#center-circle {}
+
+/* Animations */
+
+@-webkit-keyframes sentiment {
+  0% {
+    fill: hsla(0, 100%, 50%, 1);
+  }
+  50% {
+    fill: hsla(180, 100%, 50%, 1);
+  }
+  100% {
+    fill: hsla(360, 100%, 50%, 1);
+  }
+}
+@keyframes sentiment {
+  0% {
+    fill: hsla(0, 100%, 50%, 1);
+  }
+  50% {
+   fill: hsla(180, 100%, 50%, 1);
+  }
+  100% {
+   fill: hsla(360, 100%, 50%, 1);
+}
+
+stop[offset^='0'] {
+	stop-color: hsla(60, 100%, 50%, 1);
+}
+
+stop[offset^='100'] {
+	stop-color: hsla(240, 100%, 50%, 1);
 }
