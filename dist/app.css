@@ -2,3 +2,43 @@
     margin: 2em auto;
     text-align: center;
 }
+
+rect[height^='25']{
+-webkit-animation:opacity 10s infinite;
+animation:opacity 10s infinite;
+	
+  animation-name: sentiment;
+  animation-play-state: running;
+}
+
+
+@-webkit-keyframes sentiment {
+  0% {
+    fill: #bf4740;
+  }
+  33% {
+   fill:  #42bf40;
+  }
+  67% {
+   fill: #4240bf;
+  }
+  
+  100% {
+   fill: #bf4040;
+  }
+}
+@keyframes sentiment {
+  0% {
+    fill: #bf4740;
+  }
+  33% {
+   fill:  #42bf40;
+  }
+  67% {
+   fill: #4240bf;
+  }
+  
+  100% {
+   fill: #bf4040;
+  }
+}
