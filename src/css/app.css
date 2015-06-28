@@ -23,11 +23,15 @@ header h2 {
 /* SVG elements */
 
 #cover-background {
+  transition-property: fill;
+  transition-duration: 10s;
+  /*
   -webkit-animation:fill 10s infinite;
   animation:fill 10s infinite;
 
   animation-name: sentiment;
   animation-play-state: running;
+  */
 }
 
 .cover-illustration {}
@@ -49,10 +53,10 @@ header h2 {
     fill: hsla(0, 100%, 50%, 1);
   }
   50% {
-   fill: hsla(180, 100%, 50%, 1);
+    fill: hsla(180, 100%, 50%, 1);
   }
   100% {
-   fill: hsla(360, 100%, 50%, 1);
+    fill: hsla(360, 100%, 50%, 1);
   }
 }
 @keyframes sentiment {

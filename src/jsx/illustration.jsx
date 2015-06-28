@@ -59,7 +59,6 @@ var Illustration = React.createClass({
         {triangle1}
         {triangle2}
         {triangle3}
-        {pentagon}
       </g>
     )
   }
