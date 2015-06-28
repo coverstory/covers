@@ -1,5 +1,8 @@
 var React = require('react/addons');
 
+var Triangle = require('./shapes/triangle.jsx');
+var Pentagon = require('./shapes/pentagon.jsx');
+
 var Illustration = React.createClass({
 
   across: function() {
@@ -36,11 +39,23 @@ var Illustration = React.createClass({
     return <circle cx="50%" cy="50%" r="25%" fill="#FFFFFF" id="center-circle" />
   },
 
+  triangle: function() {
+    return <Triangle />
+  },
+
+  pentagon: function() {
+    return <Pentagon />
+  },
+
   render: function() {
     var circle = this.circle();
+    var triangle = this.triangle();
+    var pentagon = this.pentagon();
     return (
       <g className="cover-illustration">
         {circle}
+        {triangle}
+        {pentagon}
       </g>
     )
   }

@@ -21940,6 +21940,9 @@ module.exports = Cover;
 },{"./background.jsx":175,"./illustration.jsx":177,"react/addons":2}],177:[function(require,module,exports){
 var React = require('react/addons');
 
+var Triangle = require('./shapes/triangle.jsx');
+var Pentagon = require('./shapes/pentagon.jsx');
+
 var Illustration = React.createClass({displayName: "Illustration",
 
   across: function() {
@@ -21976,11 +21979,23 @@ var Illustration = React.createClass({displayName: "Illustration",
     return React.createElement("circle", {cx: "50%", cy: "50%", r: "25%", fill: "#FFFFFF", id: "center-circle"})
   },
 
+  triangle: function() {
+    return React.createElement(Triangle, null)
+  },
+
+  pentagon: function() {
+    return React.createElement(Pentagon, null)
+  },
+
   render: function() {
     var circle = this.circle();
+    var triangle = this.triangle();
+    var pentagon = this.pentagon();
     return (
       React.createElement("g", {className: "cover-illustration"}, 
-        circle
+        circle, 
+        triangle, 
+        pentagon
       )
     )
   }
@@ -21988,5 +22003,53 @@ var Illustration = React.createClass({displayName: "Illustration",
 });
 
 module.exports = Illustration;
+
+},{"./shapes/pentagon.jsx":178,"./shapes/triangle.jsx":179,"react/addons":2}],178:[function(require,module,exports){
+var React = require('react/addons');
+
+var Pentagon = React.createClass({displayName: "Pentagon",
+    getDefaultProps: function() {
+        return({
+            x: "50%",
+            y: "50%",
+            height: "50%",
+            width: "50%"
+        })
+    },
+
+    render: function() {
+        return (
+            React.createElement("svg", {x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width, className: "pentagon"}, 
+                React.createElement("polygon", {points: "24.999,0 50,24.098 40.448,50 9.549,50 0,24.098 "})
+            )
+        )
+    }
+});
+
+module.exports = Pentagon;
+
+},{"react/addons":2}],179:[function(require,module,exports){
+var React = require('react/addons');
+
+var Triangle = React.createClass({displayName: "Triangle",
+    getDefaultProps: function() {
+        return({
+            x: "50%",
+            y: "50%",
+            height: "50%",
+            width: "50%"
+        })
+    },
+
+    render: function() {
+        return (
+            React.createElement("svg", {x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width, className: "triangle"}, 
+                React.createElement("polygon", {points: "25,50 0,50 12.5,25 25,0 37.5,25 50,50 "})
+            )
+        )
+    }
+});
+
+module.exports = Triangle;
 
 },{"react/addons":2}]},{},[174]);
