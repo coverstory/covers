@@ -2,15 +2,16 @@ var React = require('react/addons');
 var Cover = require('./cover.jsx');
 
 var App = React.createClass({
-    render: function() {
-        return(
-            <div class="cover">
-                <Cover />
-                <h1>Moby Dick</h1>
-            </div>
-        )
+
+  render: function() {
+    var book = {
+      title: 'Moby Dick',
+      author: 'Herman Melville'
     }
+    return(
+      <Cover book={book} />
+    )
+  }
 });
 
 React.render(<App />, document.getElementById('app'));
-

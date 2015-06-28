@@ -19,10 +19,17 @@ var Cover = React.createClass({
     // the topmost element has the lowest z-index
     // the bottommost element has the highest z-index
     return (
-      <svg width={this.props.width} height={this.props.height} id="cover">
-        <Background />
-        <Illustration />
-      </svg>
+      <div className="cover container">
+        <header>
+          <h1>{this.props.book.title}</h1>
+          <p>{this.props.book.author}</p>
+        </header>
+        <svg width={this.props.width} height={this.props.height} id="cover">
+          <Background />
+          <Illustration />
+        </svg>
+      </div>
+
     );
   }
 });

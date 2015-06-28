@@ -21865,14 +21865,16 @@ var React = require('react/addons');
 var Cover = require('./cover.jsx');
 
 var App = React.createClass({displayName: "App",
-    render: function() {
-        return(
-            React.createElement("div", {class: "cover"}, 
-                React.createElement(Cover, null), 
-                React.createElement("h1", null, "Moby Dick")
-            )
-        )
+
+  render: function() {
+    var book = {
+      title: 'Moby Dick',
+      author: 'Herman Melville'
     }
+    return(
+      React.createElement(Cover, {book: book})
+    )
+  }
 });
 
 React.render(React.createElement(App, null), document.getElementById('app'));
@@ -21918,10 +21920,17 @@ var Cover = React.createClass({displayName: "Cover",
     // the topmost element has the lowest z-index
     // the bottommost element has the highest z-index
     return (
-      React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
-        React.createElement(Background, null), 
-        React.createElement(Illustration, null)
+      React.createElement("div", {className: "cover container"}, 
+        React.createElement("header", null, 
+          React.createElement("h1", null, this.props.book.title), 
+          React.createElement("p", null, this.props.book.author)
+        ), 
+        React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
+          React.createElement(Background, null), 
+          React.createElement(Illustration, null)
+        )
       )
+
     );
   }
 });
@@ -21930,8 +21939,6 @@ module.exports = Cover;
 
 },{"./background.jsx":175,"./illustration.jsx":177,"react/addons":2}],177:[function(require,module,exports){
 var React = require('react/addons');
-
-var Pentagon = require('./shapes/pentagon.jsx');
 
 var Illustration = React.createClass({displayName: "Illustration",
 
@@ -21960,8 +21967,7 @@ var Illustration = React.createClass({displayName: "Illustration",
       React.createElement("g", {className: "diagonal cover-illustration", width: "100%", height: "100%"}, 
         React.createElement("rect", {x: "0", y: "0", height: "50%", width: "50%", fill: "#0000FF"}), 
         React.createElement("rect", {x: "50%", y: "50%", height: "50%", width: "50%", fill: "#00FF00"}), 
-        React.createElement("rect", {x: "25%", y: "25%", height: "50%", width: "50%", fill: "#FFFF00"}), 
-        React.createElement(Pentagon, null)
+        React.createElement("rect", {x: "25%", y: "25%", height: "50%", width: "50%", fill: "#FFFF00"})
       )
     )
   },
@@ -21974,29 +21980,5 @@ var Illustration = React.createClass({displayName: "Illustration",
 });
 
 module.exports = Illustration;
-
-},{"./shapes/pentagon.jsx":178,"react/addons":2}],178:[function(require,module,exports){
-var React = require('react/addons');
-
-var Pentagon = React.createClass({displayName: "Pentagon",
-    getDefaultProps: function() {
-        return({
-            x: "50%",
-            y: "50%",
-            height: "50%",
-            width: "50%"
-        })
-    },
-
-    render: function() {
-        return (
-            React.createElement("svg", {x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width}, 
-                React.createElement("polygon", {points: "24.999,0 50,24.098 40.448,50 9.549,50 0,24.098 "})
-            )
-        )
-    }
-});
-
-module.exports = Pentagon;
 
 },{"react/addons":2}]},{},[174]);
