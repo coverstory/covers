@@ -14,31 +14,31 @@ animation:opacity 10s infinite;
 
 @-webkit-keyframes sentiment {
   0% {
-    fill: #bf4740;
+    fill: hsla(0, 100%, 50%, 1);
   }
   33% {
-   fill:  #42bf40;
+   fill:  hsla(60, 100%, 50%, 1);
   }
   67% {
-   fill: #4240bf;
+   fill: hsla(210, 100%, 50%, 1);
   }
   
   100% {
-   fill: #bf4040;
+   fill: hsla(360, 100%, 50%, 1);
   }
 }
 @keyframes sentiment {
   0% {
-    fill: #bf4740;
+    fill: hsla(0, 100%, 50%, 1);
   }
   33% {
-   fill:  #42bf40;
+   fill:  hsla(60, 100%, 50%, 1);
   }
   67% {
-   fill: #4240bf;
+   fill: hsla(210, 100%, 50%, 1);
   }
   
   100% {
-   fill: #bf4040;
+   fill: hsla(360, 100%, 50%, 1);
   }
 }
