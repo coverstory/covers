@@ -9,6 +9,7 @@ Automatic cover generation
 
 ## Notes
 * Cover size: `1800x2360` which is pretty much a `3:4` ratio.
+* [Sentiments](https://github.com/coverstory/covers/tree/master/sentiments)
 
 ## Inspiration
 
