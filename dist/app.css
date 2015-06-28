@@ -24,7 +24,7 @@ header h2 {
 
 #cover-background {
   transition-property: fill;
-  transition-timing: 10s;
+  transition-duration: 5s;
   /*
   -webkit-animation:fill 10s infinite;
   animation:fill 10s infinite;

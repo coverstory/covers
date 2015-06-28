@@ -21885,14 +21885,36 @@ var React = require('react/addons');
 var gradients = require('./gradients.js');
 
 var Background = React.createClass({displayName: "Background",
-  getDefaultProps: function() {
-    return {
-      color: "#FF0000"
-    }
+
+  getInitialState: function() {
+    return {secondsElapsed: 0};
+  },
+  tick: function() {
+    this.setState({secondsElapsed: this.state.secondsElapsed + 1});
+  },
+  componentDidMount: function() {
+    this.interval = setInterval(this.tick, 5000);
+  },
+  componentWillUnmount: function() {
+    clearInterval(this.interval);
   },
 
   render: function() {
-    return React.createElement("rect", {fill: this.props.color, width: "100%", height: "100%", x: "0", y: "0", id: "cover-background"});
+    var index = this.state.secondsElapsed % gradients.length;
+    var color1 = gradients[index].color1;
+    var color2 = gradients[index].color2;
+    return (
+      React.createElement("g", null, 
+        React.createElement("defs", null, 
+          React.createElement("linearGradient", {id: "bgGradient", x1: "0%", y1: "0%", x2: "100%", y2: "100%"}, 
+            React.createElement("stop", {stopColor: color1, offset: "0%"}), 
+            React.createElement("stop", {stopColor: color2, offset: "100%"})
+          )
+        ), 
+        React.createElement("rect", {fill: color1, width: "100%", height: "100%", x: "0", y: "0", id: "cover-background"})
+      )
+
+    );
   }
 });
 
@@ -22521,10 +22543,7 @@ var Illustration = React.createClass({displayName: "Illustration",
     var pentagon = this.pentagon();
     return (
       React.createElement("g", {className: "cover-illustration"}, 
-        circle, 
-        triangle1, 
-        triangle2, 
-        triangle3
+        circle
       )
     )
   }
