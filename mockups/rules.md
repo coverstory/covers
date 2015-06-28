@@ -57,4 +57,8 @@ height and width of shape = 2670px / number of shapes
 * parametric
 
 #color
-* hex
+* fill="#01295f"
+* fill="#437f97"
+* fill="#849324"
+* fill="#ffb30f"
+* fill="#fd151b"
