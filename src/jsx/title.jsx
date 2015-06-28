@@ -9,7 +9,7 @@ var Title = React.createClass({
     return {
       title: "Moby Dick",
       color: "#FFFFFF",
-      backgroundColor: "#000000",
+      backgroundColor: "transparent",
       height: "25%",
       width: "100%"
     }

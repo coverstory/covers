@@ -2,6 +2,7 @@ var React = require('react/addons');
 
 var Background = require('./background.jsx');
 var Title = require('./title.jsx');
+var Illustration = require('./illustration.jsx');
 
 var HEIGHT = 2360;
 var WIDTH = 1800;
@@ -21,6 +22,7 @@ var Cover = React.createClass({
     return (
       <svg width={this.props.width} height={this.props.height} id="cover">
         <Background />
+        <Illustration />
         <Title />
       </svg>
     );

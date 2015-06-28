@@ -21890,6 +21890,7 @@ var React = require('react/addons');
 
 var Background = require('./background.jsx');
 var Title = require('./title.jsx');
+var Illustration = require('./illustration.jsx');
 
 var HEIGHT = 2360;
 var WIDTH = 1800;
@@ -21909,6 +21910,7 @@ var Cover = React.createClass({displayName: "Cover",
     return (
       React.createElement("svg", {width: this.props.width, height: this.props.height, id: "cover"}, 
         React.createElement(Background, null), 
+        React.createElement(Illustration, null), 
         React.createElement(Title, null)
       )
     );
@@ -21917,7 +21919,26 @@ var Cover = React.createClass({displayName: "Cover",
 
 module.exports = Cover;
 
-},{"./background.jsx":175,"./title.jsx":177,"react/addons":2}],177:[function(require,module,exports){
+},{"./background.jsx":175,"./illustration.jsx":177,"./title.jsx":178,"react/addons":2}],177:[function(require,module,exports){
+var React = require('react/addons');
+
+var Illustration = React.createClass({displayName: "Illustration",
+
+  render: function() {
+    return (
+      React.createElement("g", {id: "cover-illustration", width: "100%", height: "100%"}, 
+        React.createElement("rect", {x: "0", y: "0", height: "50%", width: "50%", fill: "#0000FF"}), 
+        React.createElement("rect", {x: "50%", y: "50%", height: "50%", width: "50%", fill: "#00FF00"}), 
+        React.createElement("rect", {x: "25%", y: "25%", height: "50%", width: "50%", fill: "#FFFF00"})
+      )
+    )
+  }
+
+});
+
+module.exports = Illustration;
+
+},{"react/addons":2}],178:[function(require,module,exports){
 /* Generating a title component should do some analysis on the title
 in order to render multiple lines of text, if necessary. If there are
 multiple lines, then the title area should be resized as appropriate. */
@@ -21929,7 +21950,7 @@ var Title = React.createClass({displayName: "Title",
     return {
       title: "Moby Dick",
       color: "#FFFFFF",
-      backgroundColor: "#000000",
+      backgroundColor: "transparent",
       height: "25%",
       width: "100%"
     }
