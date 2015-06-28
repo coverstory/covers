@@ -1,6 +1,12 @@
 # covers
 Automatic cover generation
 
+## Build
+
+1. `npm install -g gulp`
+2. `npm install`
+3. `gulp`
+
 ## Notes
 * Cover size: `1800x2360` which is pretty much a `3:4` ratio.
 
