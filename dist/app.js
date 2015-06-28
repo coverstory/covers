@@ -21934,6 +21934,16 @@ var Illustration = React.createClass({displayName: "Illustration",
     )
   },
 
+  down: function() {
+    return (
+      React.createElement("g", {className: "down cover-illustration", width: "100%", height: "100%"}, 
+        React.createElement("rect", {x: "33%", y: "0%", height: "33%", width: "33%", fill: "#0000FF"}), 
+        React.createElement("rect", {x: "33%", y: "33%", height: "33%", width: "33%", fill: "#00FF00"}), 
+        React.createElement("rect", {x: "33%", y: "66%", height: "33%", width: "33%", fill: "#FFFF00"})
+      )
+    )
+  },
+
   diagonal: function() {
     return (
       React.createElement("g", {className: "diagonal cover-illustration", width: "100%", height: "100%"}, 
@@ -21945,7 +21955,7 @@ var Illustration = React.createClass({displayName: "Illustration",
   },
 
   render: function() {
-    var illustration = this.across();
+    var illustration = this.down();
     return illustration;
   }
 
