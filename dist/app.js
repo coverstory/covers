@@ -21931,6 +21931,8 @@ module.exports = Cover;
 },{"./background.jsx":175,"./illustration.jsx":177,"react/addons":2}],177:[function(require,module,exports){
 var React = require('react/addons');
 
+var Triangle = require('./shapes/triangle.jsx');
+
 var Illustration = React.createClass({displayName: "Illustration",
 
   across: function() {
@@ -21958,7 +21960,8 @@ var Illustration = React.createClass({displayName: "Illustration",
       React.createElement("g", {className: "diagonal cover-illustration", width: "100%", height: "100%"}, 
         React.createElement("rect", {x: "0", y: "0", height: "50%", width: "50%", fill: "#0000FF"}), 
         React.createElement("rect", {x: "50%", y: "50%", height: "50%", width: "50%", fill: "#00FF00"}), 
-        React.createElement("rect", {x: "25%", y: "25%", height: "50%", width: "50%", fill: "#FFFF00"})
+        React.createElement("rect", {x: "25%", y: "25%", height: "50%", width: "50%", fill: "#FFFF00"}), 
+        React.createElement(Triangle, null)
       )
     )
   },
@@ -21971,5 +21974,29 @@ var Illustration = React.createClass({displayName: "Illustration",
 });
 
 module.exports = Illustration;
+
+},{"./shapes/triangle.jsx":178,"react/addons":2}],178:[function(require,module,exports){
+var React = require('react/addons');
+
+var Triangle = React.createClass({displayName: "Triangle",
+    getDefaultProps: function() {
+        return({
+            x: "50%",
+            y: "50%",
+            height: "50%",
+            width: "50%"
+        })
+    },
+
+    render: function() {
+        return (
+            React.createElement("svg", {x: this.props.x, y: this.props.y, height: this.props.height, width: this.props.width}, 
+                React.createElement("polygon", {points: "25,50 0,50 12.5,25 25,0 37.5,25 50,50 "})
+            )
+        )
+    }
+});
+
+module.exports = Triangle;
 
 },{"react/addons":2}]},{},[174]);
