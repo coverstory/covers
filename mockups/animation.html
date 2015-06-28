@@ -51,26 +51,62 @@
 */
 
 circle/*[class^='shape']*/{
--webkit-animation:opacity 5s infinite;
-animation:opacity 5s infinite;
+-webkit-animation:opacity 10s infinite;
+animation:opacity 10s infinite;
 	
   animation-name: sentiment;
   animation-play-state: running;
 }
 
+/*@keyframes sentiment {
+  0% {
+    fill: hsla(0,50%, 50%, 1);
+  }
+  33% {
+   fill:  hsla(180,50%, 50%, 1);
+  }
+  67% {
+   fill: hsla(360, 50%, 50%, 1);
+  }
+  
+  100% {
+   fill: hsla(180, 50%, 50%, 1);
+  }
+}*/
+
+@-webkit-keyframes sentiment {
+  0% {
+    fill: #bf4740;
+  }
+  33% {
+   fill:  #42bf40;
+  }
+  67% {
+   fill: #4240bf;
+  }
+  
+  100% {
+   fill: #bf4040;
+  }
+}
 @keyframes sentiment {
   0% {
-    fill: hsla(180,50%, 50%, 1);
+    fill: #bf4740;
   }
-  50% {
-   fill:  hsla(240,50%, 50%, 1);
+  33% {
+   fill:  #42bf40;
   }
+  67% {
+   fill: #4240bf;
+  }
+  
   100% {
-   fill: hsla(360, 50%, 50%, 1);
+   fill: #bf4040;
   }
 }
 
 </style>
+
     </head>
 
     <body><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
