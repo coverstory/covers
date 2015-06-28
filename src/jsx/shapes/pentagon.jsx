@@ -12,7 +12,7 @@ var Pentagon = React.createClass({
 
     render: function() {
         return (
-            <svg x={this.props.x} y={this.props.y} height={this.props.height} width={this.props.width}>
+            <svg x={this.props.x} y={this.props.y} height={this.props.height} width={this.props.width} className="pentagon">
                 <polygon points="24.999,0 50,24.098 40.448,50 9.549,50 0,24.098 "/>
             </svg>
         )
