@@ -21876,11 +21876,8 @@ var App = React.createClass({displayName: "App",
 
 React.render(React.createElement(App, null), document.getElementById('app'));
 
-},{"./cover.jsx":175,"react/addons":2}],175:[function(require,module,exports){
+},{"./cover.jsx":176,"react/addons":2}],175:[function(require,module,exports){
 var React = require('react/addons');
-
-var HEIGHT = 2360;
-var WIDTH = 1800;
 
 var Background = React.createClass({displayName: "Background",
   getDefaultProps: function() {
@@ -21896,22 +21893,16 @@ var Background = React.createClass({displayName: "Background",
   }
 });
 
-var Title = React.createClass({displayName: "Title",
-  getDefaultProps: function() {
-    return {
-      color: "#FFFFFF",
-      backgroundColor: "#000000",
-      height: "25%",
-      width: "100%"
-    }
-  },
+module.exports = Background;
 
-  render: function() {
-    return (
-      React.createElement("rect", {fill: this.props.backgroundColor, width: this.props.width, height: this.props.height, x: "0", y: "0"})
-    )
-  }
-});
+},{"react/addons":2}],176:[function(require,module,exports){
+var React = require('react/addons');
+
+var Background = require('./background.jsx');
+var Title = require('./title.jsx');
+
+var HEIGHT = 2360;
+var WIDTH = 1800;
 
 var Cover = React.createClass({displayName: "Cover",
   getDefaultProps: function() {
@@ -21935,5 +21926,27 @@ var Cover = React.createClass({displayName: "Cover",
 });
 
 module.exports = Cover;
+
+},{"./background.jsx":175,"./title.jsx":177,"react/addons":2}],177:[function(require,module,exports){
+var React = require('react/addons');
+
+var Title = React.createClass({displayName: "Title",
+  getDefaultProps: function() {
+    return {
+      color: "#FFFFFF",
+      backgroundColor: "#000000",
+      height: "25%",
+      width: "100%"
+    }
+  },
+
+  render: function() {
+    return (
+      React.createElement("rect", {fill: this.props.backgroundColor, width: this.props.width, height: this.props.height, x: "0", y: "0"})
+    )
+  }
+});
+
+module.exports = Title;
 
 },{"react/addons":2}]},{},[174]);

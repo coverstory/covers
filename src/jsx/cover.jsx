@@ -1,38 +1,10 @@
 var React = require('react/addons');
 
+var Background = require('./background.jsx');
+var Title = require('./title.jsx');
+
 var HEIGHT = 2360;
 var WIDTH = 1800;
-
-var Background = React.createClass({
-  getDefaultProps: function() {
-    return {
-      color: "#FF0000"
-    }
-  },
-
-  render: function() {
-    return (
-      <rect fill={this.props.color} width="100%" height="100%" x="0" y="0" id="cover-background" />
-    );
-  }
-});
-
-var Title = React.createClass({
-  getDefaultProps: function() {
-    return {
-      color: "#FFFFFF",
-      backgroundColor: "#000000",
-      height: "25%",
-      width: "100%"
-    }
-  },
-
-  render: function() {
-    return (
-      <rect fill={this.props.backgroundColor} width={this.props.width} height={this.props.height} x="0" y="0" />
-    )
-  }
-});
 
 var Cover = React.createClass({
   getDefaultProps: function() {
