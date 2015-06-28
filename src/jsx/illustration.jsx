@@ -2,6 +2,16 @@ var React = require('react/addons');
 
 var Illustration = React.createClass({
 
+  across: function() {
+    return (
+      <g className="across cover-illustration" width="100%" height="100%">
+        <rect x="0" y="33%" height="33%" width="33%" fill="#0000FF" />
+        <rect x="33%" y="33%" height="33%" width="33%" fill="#00FF00" />
+        <rect x="66%" y="33%" height="33%" width="33%" fill="#FFFF00" />
+      </g>
+    )
+  },
+
   diagonal: function() {
     return (
       <g className="diagonal cover-illustration" width="100%" height="100%">
@@ -13,7 +23,7 @@ var Illustration = React.createClass({
   },
 
   render: function() {
-    var illustration = this.diagonal();
+    var illustration = this.across();
     return illustration;
   }
 
