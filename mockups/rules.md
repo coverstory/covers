@@ -5,56 +5,56 @@
 
 #feature shape
 ## height & width
-*if across:
+* if across:
 height and width of shape = 1620px / number of shapes
 
-*if down:
+* if down:
 height and width of shape = 2120px / number of shapes
 
-*if diagonal:
+* if diagonal:
 height and width of shape = 2670px / number of shapes
 
 
 ## new shape instance
-if across:
+* if across:
   x = x + width * 1.1
   y = y
 
-if down:
+* if down:
   x = x
   y = y + height * 1.1
 
-if diagonal:
+* if diagonal:
   x = x +  width * 1.1
   y = y + height * 1.1
 
 
 ## margin
-*if detach:
+* if detach:
   margin = size * .9
 
-*if touch:
+* if touch:
   margin = 0
 
-*if union:
+* if union:
   margin = -(size * .67)
 
-*if overlap:
+* if overlap:
   margin is 
 
-*if subtract:
+* if subtract:
   margin is 
 
-*if intersect:
+* if intersect:
   margin is 
 
 
 ##rotation
-*0 degrees
-*or 15 degrees
+* 0 degrees
+* or 15 degrees
   
 #texture
-*parametric
+* parametric
 
 #color
-*hex
+* hex
