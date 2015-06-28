@@ -1,4 +1,4 @@
-[
+var gradients = [
   {
     "name":"Emerald Water",
     "color1":"#348F50",
@@ -519,4 +519,6 @@
     "color1":"#525252",
     "color2":"#3d72b4"
   }
-]
+];
+
+module.exports = gradients;

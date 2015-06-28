@@ -1,5 +1,7 @@
 var React = require('react/addons');
 
+var gradients = require('./gradients.js');
+
 var Background = React.createClass({
   getDefaultProps: function() {
     return {
