@@ -64,5 +64,12 @@ header h2 {
   }
   100% {
    fill: hsla(360, 100%, 50%, 1);
-  }
+}
+
+stop[offset^='0'] {
+	stop-color: hsla(60, 100%, 50%, 1);
+}
+
+stop[offset^='100'] {
+	stop-color: hsla(240, 100%, 50%, 1);
 }

@@ -66,3 +66,43 @@ header h2 {
    fill: hsla(360, 100%, 50%, 1);
   }
 }
+
+rect[height^='25']{
+-webkit-animation:opacity 10s infinite;
+animation:opacity 10s infinite;
+	
+  animation-name: sentiment;
+  animation-play-state: running;
+}
+
+
+@-webkit-keyframes sentiment {
+  0% {
+    fill: hsla(0, 100%, 50%, 1);
+  }
+  33% {
+   fill:  hsla(60, 100%, 50%, 1);
+  }
+  67% {
+   fill: hsla(210, 100%, 50%, 1);
+  }
+  
+  100% {
+   fill: hsla(360, 100%, 50%, 1);
+  }
+}
+@keyframes sentiment {
+  0% {
+    fill: hsla(0, 100%, 50%, 1);
+  }
+  33% {
+   fill:  hsla(60, 100%, 50%, 1);
+  }
+  67% {
+   fill: hsla(210, 100%, 50%, 1);
+  }
+  
+  100% {
+   fill: hsla(360, 100%, 50%, 1);
+  }
+}

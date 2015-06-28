@@ -9,6 +9,7 @@ Automatic cover generation
 
 ## Notes
 * `gradients.json` file courtesy [uiGradients](https://github.com/Ghosh/uiGradients)
+* [Sentiments](https://github.com/coverstory/covers/tree/master/sentiments)
 
 ## Resources
 
