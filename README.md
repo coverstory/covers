@@ -7,6 +7,9 @@ Automatic cover generation
 2. `npm install`
 3. `gulp`
 
+## Notes
+* Cover size: `1800x2360` which is pretty much a `3:4` ratio.
+
 ## Inspiration
 
 * [Spirals](http://golancourses.net/2011spring/03/22/4962/)
@@ -17,6 +20,8 @@ Automatic cover generation
 * [Parametric art - part 2 (interactive)](http://www.flashandmath.com/advanced/art/)
 * [Fourier Art](http://fourierart.com/)
 * [Book covers with parametric curves](http://www.tiemenrapati.com/blog/?p=427)
+* [Beautiful Gradients](http://uigradients.com/#Mojito)
+* [Swissted - Swiss design applied to concert posters](http://www.swissted.com)
 * Rectangle world, lots of great articles [here](http://rectangleworld.com/)
   * [Fractal lines](http://rectangleworld.com/blog/archives/538)
   * [Chaotic fractals](http://rectangleworld.com/blog/archives/561)
