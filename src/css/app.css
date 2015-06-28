@@ -3,8 +3,8 @@
 	text-align: center;
 }
 rect:not([id]) {
-	-webkit-animation:bubble linear 3s infinite running;
-	animation:bubble linear 3s infinite running;
+	-webkit-animation:bubble linear 3s infinite ;
+	animation:bubble linear 3s infinite ;
 	position: relative;    
 
 
