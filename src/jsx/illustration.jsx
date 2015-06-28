@@ -39,8 +39,8 @@ var Illustration = React.createClass({
     return <circle cx="50%" cy="50%" r="25%" fill="#FFFFFF" id="center-circle" />
   },
 
-  triangle: function() {
-    return <Triangle />
+  triangle: function(x, y, height, width) {
+    return <Triangle x={x} y={y} height={height} width={width} />
   },
 
   pentagon: function() {
@@ -49,12 +49,16 @@ var Illustration = React.createClass({
 
   render: function() {
     var circle = this.circle();
-    var triangle = this.triangle();
+    var triangle1 = this.triangle("10%", "10%", "50%", "50%");
+    var triangle2 = this.triangle("20%", "30%", "50%", "50%");
+    var triangle3 = this.triangle("30%", "50%", "50%", "50%");
     var pentagon = this.pentagon();
     return (
       <g className="cover-illustration">
         {circle}
-        {triangle}
+        {triangle1}
+        {triangle2}
+        {triangle3}
         {pentagon}
       </g>
     )
