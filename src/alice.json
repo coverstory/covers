@@ -1,0 +1,126 @@
+{
+    "book": {
+        "title": "Alice’s Adventures in Wonderland",
+        "author":"Lewis Carroll",
+        "chapters": [
+        {
+            "id": 1,
+            "stats": {
+                "chapterMood": "neutral",
+                "chapterWords": 11012,
+                "neg": 0.649956941002,
+                "pos": 0.350043058998,
+                "neutral": 0.751059263943,
+                "sentenceCount": 67
+            }
+        },
+        {
+            "id": 2,
+            "stats": {
+                "chapterMood": "neutral",
+                "chapterWords": 10690,
+                "neg": 0.467849331642,
+                "pos": 0.532150668358,
+                "neutral": 0.587486491826,
+                "sentenceCount": 101
+            }
+        },
+        {
+            "id": 3,
+            "stats": {
+                "chapterMood": "neutral",
+                "chapterWords": 8881,
+                "neg": 0.593154656024,
+                "pos": 0.406845343976,
+                "neutral": 0.880193186102,
+                "sentenceCount": 104
+            }
+        },
+        {
+            "id": 4,
+            "stats": {
+                "chapterMood": "neg",
+                "chapterWords": 13564,
+                "neg": 0.710295012067,
+                "pos": 0.289704987933,
+                "neutral": 0.343501779951,
+                "sentenceCount": 126
+            }
+        },
+        {
+            "id": 5,
+            "stats": {
+                "chapterMood": "neg",
+                "chapterWords": 11428,
+                "neg": 0.831861861341,
+                "pos": 0.168138138659,
+                "neutral": 0.214661248009,
+                "sentenceCount": 113
+            }
+        },
+        {
+            "id": 6,
+            "stats": {
+                "chapterMood": "neutral",
+                "chapterWords": 13444,
+                "neg": 0.855284205692,
+                "pos": 0.144715794308,
+                "neutral": 0.847616275592,
+                "sentenceCount": 126
+            }
+        },
+        {
+            "id": 7,
+            "stats": {
+                "chapterMood": "neutral",
+                "chapterWords": 12257,
+                "neg": 0.462037611055,
+                "pos": 0.537962388945,
+                "neutral": 0.824112749156,
+                "sentenceCount": 152
+            }
+        },
+        {
+            "id": 8,
+            "stats": {
+                "chapterMood": "neg","chapterWords": 13272,
+                "neg": 0.669280356473,
+                "pos": 0.330719643527,
+                "neutral": 0.256027898504,
+                "sentenceCount": 117
+            }
+        },
+        {
+            "id": 9,
+            "stats": {
+                "chapterMood": "pos",
+                "chapterWords": 12219,
+                "neg": 0.435721455437,
+                "pos": 0.564278544563,
+                "neutral": 0.143001168832,
+                "sentenceCount": 145
+            }
+        },
+        {
+            "id": 10,
+            "stats": {
+                "chapterMood": "neg",
+                "chapterWords": 11024,
+                "neg": 0.820401002715,
+                "pos": 0.179598997285,
+                "neutral": 0.245782721155,
+                "sentenceCount": 128
+            }
+        },
+        {
+            "id": 11,
+            "stats": {
+                "chapterMood": "neutral","chapterWords": 10062,
+                "neg": 0.230978805352,
+                "pos": 0.769021194648,
+                "neutral": 0.778726090115,
+                "sentenceCount": 108
+            }
+        }]
+    }
+}
